@@ -5,9 +5,11 @@ const handlebars = require("express-handlebars");
 
 const router = require("./controllers");
 const sequelize = require("./config/connection");
+const { handle } = require("express/lib/application");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const hbs = handlebars.create();
 
 app.use(
   session({
@@ -19,6 +21,9 @@ app.use(
     }),
   })
 );
+
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 
 app.use(express.json());
