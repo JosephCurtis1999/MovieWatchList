@@ -25,6 +25,17 @@ router.post("/", async (req, res) => {
   req.session.studentId = student.id;
   req.session.loggedIn = true;
 
+  req.session.save(() => {
+    req.session.user_id = studentData.id;
+    req.session.email = studentData.email;
+    req.session.loggedIn = true;
+
+    res.json({
+        user: studentData,
+        message: 'You are now logged in!'
+    });
+});
+
   res.status(204).end();
 });
 

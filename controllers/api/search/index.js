@@ -36,9 +36,9 @@ router.post('/', function(req, res) {
 
 router.get("/", async (req, res) => {
     try {
-      const studentsData = await Movie.findAll();
+      const movieData = await Movie.findAll();
   
-      const students = studentsData.map((student) =>
+      const students = movieData.map((student) =>
         student.get({ plain: true })
       );
   
