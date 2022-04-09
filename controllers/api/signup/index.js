@@ -3,19 +3,19 @@ const { Student } = require("../../../models");
 
 const router = express.Router();
 
-const signupFormHandler = async function(event) {
-    event.preventDefault();
+router.post("/", async (req, res) => {
+    try {
+      const studentData = await Student.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+      });
+  
+      res.json(studentData.get({ plain: true }));
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+});
 
-    const usernameEl = document.querySelector('#username-signup');
-    const passwordEl = document.querySelector('#password-signup');
-    fetch("/api/users", {
-        method: "post",
-        body: JSON.stringify({
-            username: usernameEl.value,
-            password: passwordEl.value
-        })
-    })
-};
 
-document.querySelector("#signup-form")
-document.addEventListener("#submit", signupFormHandler);
+module.exports = router;
