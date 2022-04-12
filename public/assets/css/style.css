@@ -3,6 +3,7 @@ body {
     background-color:#222121;
     padding-bottom:80px;
     font-family: 'Barlow', sans-serif;
+    color: #ebeff1;
   }
   
   @media (min-width:768px) {
@@ -88,8 +89,9 @@ body {
   .header-black .navbar .navbar-nav > li > .dropdown-menu {
     margin-top:-5px;
     box-shadow:0 4px 8px rgba(0,0,0,.1);
-    background: transparent;
-    border-radius:2px;
+    /* background:linear-gradient(135deg, #222121, #4e4b4b); */
+    background-color:#222121;
+    border-radius: 7px;
   }
   
   .header-black .navbar .dropdown-menu .dropdown-item:focus, .header-black .navbar .dropdown-menu .dropdown-item {
@@ -196,6 +198,80 @@ body {
   }
   
 
+  /* login start */
+
+  .user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    background: #272424;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    color: #d9d9d9;
+
+}
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+}
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #FAA500;
+}
+.form_container {
+    margin-top: 100px;
+}
+.login_btn {
+    width: 100%;
+    background: #D73739 !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    background: #D73739 !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #FAA500 !important;
+}
   
+a {
+  color: #FAA500;
+}
+
+.btn-custom {
+  background-color: #D73739;
+  color: #ebeff1;
+}
+
+/* login end */
   
   
