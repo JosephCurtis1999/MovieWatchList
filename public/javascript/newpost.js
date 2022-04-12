@@ -1,6 +1,7 @@
 const commentForm = document.querySelector("#comment-form");
 const submitBtn = document.querySelector(".submit-btn");
 
+// async function to allow the user to make a new post with a title and content
 const commentFormHandler = async (event) => {
     event.preventDefault();
 
@@ -28,6 +29,7 @@ const commentFormHandler = async (event) => {
     }
 };
 
+// post is submitted using a submit button
 commentForm.addEventListener("submit", commentFormHandler);
 
 // Inactivity function to time the user out
