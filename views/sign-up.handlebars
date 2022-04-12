@@ -1,0 +1,64 @@
+        <nav class="navbar navbar-default navbar-inverse navbar-toggleable-lg">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <a class="navbar-brand" href="/">MovieWatchList</a>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" action="/api/keyword" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control searchField" placeholder="Search Actors">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default search" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://github.com/JosephCurtis1999/MovieWatchList">About Us</a></li>
+                        <li class="active"><a href="/sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="display"></div>
+<div class="image">
+
+<section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-wrap">
+                <h1>Create an account by filling out the information below</h1>
+                    <form role="form" action="/sign-up" method="post" id="login-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Pick a username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Create a password">
+                        </div>
+                        <div class="checkbox">
+                            <span class="character-checkbox" onclick="showPassword()"></span>
+                            <span class="label">Show password</span>
+                        </div>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Sign Up">
+                    </form>
+                    <a href="/login" class="forget" data-toggle="modal" data-target=".forget-modal">Already Have an Account? Log In!</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>

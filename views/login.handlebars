@@ -1,48 +1,59 @@
-{{!-- <div class="container container-fluid row justify-content-center mx-auto my-3">
-  <div class="col-md-5 my-3">
-    <form class="login-form">
-        <h4 class="text-info text-center">Login</h4>
-        <div class="form-group row">
-          <label for="email-login">Email:</label>
-          <input class="form-control" type="email" id="email-login">
-        </div>
-        <div class="form-group row">
-          <label for="password-login">Password:</label>
-          <input class="form-control" type="password" id="password-login">
-        </div>
-        <div class="text-center">
-          <p><a href="/signup">Sign up instead!</a></p>
-          <button class="btn btn-primary" type="submit">Sign In</button>
-        </div>
-    </form>
-  </div>
-</div>
-
-<script src="/controllers/api/login/index.js"></script> --}}
-  
-  
-  
-<section class="login-page">
-    <div class="form-heading">
-        <h1>Log In</h1>
-    </div>
-    <div class="form-section">
-        <form class="login-form">
-            <div>
-                <label for="username-login">Username</label>
-                <input type="text" class="entry-field" id="username-login" />
+        <nav class="navbar navbar-default navbar-inverse navbar-toggleable-lg">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <a class="navbar-brand" href="/">MovieWatchList</a>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" action="/api/keyword" method="GET">
+                        <div class="input-group">
+                            <input type="text" class="form-control searchField" placeholder="Search Actors">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default search" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://github.com/JosephCurtis1999/MovieWatchList">About Us</a></li>
+                        <li><a href="/sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li class="active"><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="display"></div>
+<div class="image">
+            <section id="login">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-wrap">
+                                <h1> LOG-IN</h1>
+                                <form role="form" action="/login" method="post" id="login-form" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="username" class="sr-only">Username</label>
+                                        <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="sr-only">Password</label>
+                                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="checkbox">
+                                        <span class="character-checkbox" onclick="showPassword()"></span>
+                                        <span class="label">Show password</span>
+                                    </div>
+                                    <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
+                                </form>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             </div>
-            <div>
-                <label for="password-login">Password</label>
-                <input type="password" class="entry-field" id="password-login" />
             </div>
-            <div>
-                <button type="submit" class="login-signup-btn">Log In!</button>
-            </div>
-        </form>
-    </div>
-
-    <a href="/signup" class="sign-in-link">sign up instead</a>
-</section>
-
-<script src="/javascript/login.js"></script>
+            
