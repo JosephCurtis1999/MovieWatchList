@@ -103,7 +103,7 @@ router.get('/userData', isLoggedIn, function(req, res) {
 
 router.put('/movieSearch', function(req, res) {
 	var queryMovie = req.body.movie;
-	var queryURL = 'http://api.themoviedb.org/3/search/movie?api_key=e7c02e2eebde91634313b6657052a2a2&query=' +queryMovie
+	var queryURL = 'http://api.themoviedb.org/3/search/movie?api_key=e7c02e2eebde91634313b6657052a2a2&query=' + queryMovie
 	request(queryURL, function(err, response, body) {
 		var dataObj = JSON.parse(body);
 		var hbsObj = {
