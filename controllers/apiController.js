@@ -69,7 +69,7 @@ router.route('/watchlist/:movieID?')
 	.post(isLoggedIn, function(req, res) {
 		var movie = {};
 		var movieId = req.body.movieID;
-		var queryURL = 'https://api.themoviedb.org/3/movie/'+movieId+'?api_key=85b3a680df0c4f07bb1e32b948cbe4c6&language=en-US'
+		var queryURL = 'https://api.themoviedb.org/3/movie/'+movieId+'?api_key=e7c02e2eebde91634313b6657052a2a2&language=en-US'
 		request(queryURL, function(err, response, body) {
 			body = JSON.parse(body);
 			movie = {
@@ -103,7 +103,7 @@ router.get('/userData', isLoggedIn, function(req, res) {
 
 router.put('/movieSearch', function(req, res) {
 	var queryMovie = req.body.movie;
-	var queryURL = 'http://api.themoviedb.org/3/search/movie?api_key=85b3a680df0c4f07bb1e32b948cbe4c6&query=' +queryMovie
+	var queryURL = 'http://api.themoviedb.org/3/search/movie?api_key=e7c02e2eebde91634313b6657052a2a2&query=' +queryMovie
 	request(queryURL, function(err, response, body) {
 		var dataObj = JSON.parse(body);
 		var hbsObj = {
@@ -123,7 +123,7 @@ router.put('/movieSearch', function(req, res) {
 
 
 var options = {
-    uri: 'https://api.themoviedb.org/3/discover/movie?api_key=85b3a680df0c4f07bb1e32b948cbe4c6&sort_by=popularity.desc&include_adult=true',
+    uri: 'https://api.themoviedb.org/3/discover/movie?api_key=e7c02e2eebde91634313b6657052a2a2&sort_by=popularity.desc&include_adult=true',
     headers: {
         'User-Agent': 'Request-Promise'
     },
@@ -150,7 +150,7 @@ rp(options)
 
 
 var options = {
-	uri: 'http://api.themoviedb.org/3/movie/upcoming?api_key=85b3a680df0c4f07bb1e32b948cbe4c6&sort_by=release_date.desc',
+	uri: 'http://api.themoviedb.org/3/movie/upcoming?api_key=e7c02e2eebde91634313b6657052a2a2&sort_by=release_date.desc',
 	headers: {
 		'User-Agent': 'Request-Promise'
 	},
