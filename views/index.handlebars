@@ -1,62 +1,18 @@
-        <nav class="navbar navbar-default navbar-inverse navbar-toggleable-lg">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <a class="navbar-brand" href="/">MovieWatchList</a
-                        <li class="active"><a href="/">Home</a></li>
-                    </ul>
-
-                    <form class="navbar-form navbar-right" action="/api/keyword" method="POST">
-                        <div class="input-group">
-                            <input type="text" class="form-control searchField" placeholder="Search Actor" name="searchField">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default search" type="submit">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </button>
+{{!-- Hero start --}}
+                <div class="container hero">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                            <h1>The Cut</h1>
+                            <p>Movie fanatics, enthusiasts and all the above, <em>The Cut</em> is the answer you have all been waiting for.
+                            <br><br>Save, rate and debate your most recently watched and all time favourite movies with other movie fans on your very own watched movie database.</p><a class="btn btn-light btn-lg action-button" role="button" href="/sign-up">Sign Up Today</a></div>
+                        <div
+                            class="col-md-4 col-lg-4 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                            <div class="laptop-mockup"><img src="assets/css/hero_image2.png" class="device">
                             </div>
                         </div>
-                    </form>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://github.com/JosephCurtis1999/MovieWatchList">About This Project</a></li>
-                        <li><a href="/sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    </ul>
+                    </div>
                 </div>
-        </nav>
-
-<div class="row">
-            <div class="jumbotron">
-               
-                <div class="container">
-                    <h1><center>Find Movies With Your Favorite Actors</center></h1>
-                    <br><center><h5>By Using the Search Bar Above</h5></center>
-                </div>
-            </div>
-    </div>
-
-
-
-<div class="middle">
-<a href="#" class="scroll-down" address="true"></a>
-</div>
- 
- <div class="titleDisplay">
-            {{#each movieTitles}}
-            <ul>       
-            <h3>{{this.movieTitle}}</h3>            
-            </ul>
-            {{/each}}
         </div>
-
-<div class="middle"></div>
-
-            <div class="jumbotron">
-                <div class="container">
-                    <h1><center>Log-In to Access</center></h1>
-                </div>
-            </div>
+        </div>
+{{!-- Hero end --}}
         
