@@ -84,7 +84,7 @@ router.route('/watchlist/:movieID?')
 			}
 
 			Watchlist.findOrCreate({ where: movie }).then(function(data) {
-
+				res.redirect('/api/watchlist')
 			});
 		});
 		
