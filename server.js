@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const passport = require('passport');
 const path = require('path');
 const handlebars = require("express-handlebars");
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(methodOverride('_method'));
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");

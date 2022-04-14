@@ -73,7 +73,7 @@ router.route('/watchlist/:movieID?')
 		request(queryURL, function(err, response, body) {
 			body = JSON.parse(body);
 			movie = {
-				title: body.title,
+				title: body.original_title,
 				release_date: body.release_date,
 				overview: body.overview,
 				popularity: body.popularity,
