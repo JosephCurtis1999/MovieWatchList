@@ -70,7 +70,7 @@ router.route('/watchlist/:movieID?')
 		var movie = {};
 		var movieId = req.body.movieID;
 		var queryURL = 'https://api.themoviedb.org/3/movie/'+movieId+'?api_key=e7c02e2eebde91634313b6657052a2a2&language=en-US'
-		request(queryURL, function(body) {
+		request(queryURL, function(err, response, body) {
 			body = JSON.parse(body);
 			movie = {
 				title: body.original_title,
