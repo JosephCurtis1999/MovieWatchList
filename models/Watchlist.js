@@ -8,7 +8,7 @@ Watchlist.init(
     {
        title: {
 			type: DataTypes.STRING,
-			allowNull: false
+			allowNull: false,
 		},
 		release_date: {
 			type: DataTypes.STRING,
