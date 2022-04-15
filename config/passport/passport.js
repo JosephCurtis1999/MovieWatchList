@@ -11,10 +11,12 @@ module.exports = function(passport, user) {
 		passReqToCallback: true
 	}, function(req, username, password, done) {
 
+		// encrypts the password stored in the database
 		var generateHash = function(password) {
 			return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
 		};
 
+		// used to find a single user in order to sign them in
 		Users.findOne({
 			where: {
 				username: username
@@ -45,6 +47,8 @@ module.exports = function(passport, user) {
 		});
 	}));
 
+	// dont really know why serialize and deserialize is important but 
+	// passport doesnt work without it 
 	passport.serializeUser(function(user, done) {
 		done(null, user.id);
 	});
@@ -66,6 +70,7 @@ module.exports = function(passport, user) {
 	}, function(req, username, password, done) {
 		var User = user;
 
+		// compares passwords to let users sign in
 		var isValidPassword = function(userPass, password) {
 			return bCrypt.compareSync(password, userPass);
 		}
@@ -74,6 +79,7 @@ module.exports = function(passport, user) {
 			where: {
 				username: username
 			}
+			// checking if the entered info is right or wrong
 		}).then(function(user) {
 			if (!user) {
 				return done(null, false, { message: 'Username does not exist.' });
