@@ -68,7 +68,11 @@ https://rocky-wave-29154.herokuapp.com/
 
 ## Github repository
 
+https://github.com/JosephCurtis1999/MovieWatchList
+
 ## Questions 
+
+If you have any questions don't hesitate to contact us
 
 
 
