@@ -32,7 +32,7 @@ router.get ('/', function(req, res) {
 	}
 
 	if (req.isAuthenticated()) {
-		res.redirect('/user');
+		res.redirect('api/user');
 	} else {
 			res.render('index', data);
 	}
