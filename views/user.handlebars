@@ -1,4 +1,4 @@
-        <nav class="navbar navbar-inverse ">
+        {{!-- <nav class="navbar navbar-inverse ">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -32,14 +32,14 @@
                    
                   </div>
              </div>
-         </nav>
+         </nav> --}}
 
 
         <div class="section">
         <br>
         
  
-          <section id="searchBar">
+          {{!-- <section id="searchBar">
                   <div class="row" class="searchbar">
                     <div class="col-sm-12 col-sm-offset-4" style="margin-bottom:0px">
                                          
@@ -60,26 +60,32 @@
                   <div class="row" >
                   <br>                   
                   </div>
-              </section>
-        <div class="row" style="background-color:#c81b85;" >
-           <div class="col col-left-center col-full-xs" id="searchResult">
+              </section> --}}
                     {{#if this.movieSearch}}
-                       <div class="row" >                   
-                          <div class="col col-left-center col-full-xs searchtext">
-                             <h2>Search Results:<span id=>{{movieSearch}}</span></h2 >
+                       <section id="search">
+                       <div class="row">
+                            <div class="col col-left-center col-full-xs">
+                            </div>
+                        </div>
+                          <div class="row watchlist-title" >                   
+                           <h1 class="flash">Search Results</h1>
                           </div>
-                      </div>
+                        </section>
                       {{else}}
-
-                      <div class="row" >                   
-                          <div class="col col-left-center col-full-xs searchtext">
-                             <h2>Latest Movies<span id=>{{movieSearch}}</span></h2 >
+                           <section id="search">
+                       <div class="row">
+                            <div class="col col-left-center col-full-xs">
+                            </div>
+                        </div>
+                          <div class="row watchlist-title" >
+                              <h1>Latest Movies<span id=>{{movieSearch}}</span></h1>                   
                           </div>
+                        </section>                
                      {{/if}}     
              <ul>
                 {{#each data}}
 
-                  <div class="col-md-6" id="imagecard">
+                  {{!-- <div class="col-md-6" id="imagecard">
                     
                     <div class="media">
                         <div class="media-left media-middle">
@@ -102,7 +108,34 @@
                         </div>
                       </div>
 
-                  </div>
+                  </div> --}}
+                  <div class="card-container">
+        
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img src=http://image.tmdb.org/t/p/w185{{this.poster_path}} alt="Lights">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h4 class="media-heading" style="font-style: 'Source Sans Pro', sans-serif">{{this.title}} ({{this.release_date}}) </h4>
+                                </div>
+                                <div class="card__body">
+                                    
+                          <h5 class="rating">{{this.popularity}} <span class="glyphicon glyphicon-star"></span>{{this.vote_average}}  <span class="glyphicon glyphicon-thumbs-up"></span></h5>
+                                                    
+                          <h6 class="overview"> {{this.overview}}</h6>
+                           <form action="/api/watchlist" method="POST">
+                                 <input type='hidden' name="movieID" value={{this.id}}>
+                                 <button type='submit' class="btn btn-primary" id="watchlater" >Watch later!</button>
+                               </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                </div>
                 {{/each}}
             </ul>
           </div>
