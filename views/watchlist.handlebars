@@ -1,4 +1,4 @@
-        <nav class="navbar navbar-inverse ">
+        {{!-- <nav class="navbar navbar-inverse ">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -6,14 +6,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">MovieWatchList</a>
+                    {{!-- <a class="navbar-brand" href="/">MovieWatchList</a> --}}
                 </div>
               
                 <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="/api/user">Home</a></li>
-                            <li><a href="/api/popular">Popular Movies</a></li>
-                            <li class="active"><a href="/api/watchlist">Watch List</a></li>
+                            {{!-- <li><a href="/api/popular">Popular Movies</a></li> --}}
+                            <li class="active"><a href="/api/watchlist">WatchList</a></li>
                            
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -28,7 +28,7 @@
                     </ul>
                 </div>  
             </div>
-        </nav>
+        </nav> --}}
         <section id="searchBar">
                        <div class="row">
                             <div class="col col-left-center col-full-xs">
@@ -70,6 +70,8 @@
                     </div>
 
                   </div> --}}
+
+                  {{!-- movie cards --}}
                   
                   <div class="card-container">
         
@@ -98,6 +100,8 @@
                     </div>
                 </div> 
                 </div>
+
+                {{!-- movie cards end --}}
                 
                 {{/each}}
             </ul>
