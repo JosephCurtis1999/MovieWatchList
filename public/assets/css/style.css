@@ -470,3 +470,46 @@ a {
   color: white;
 }
 
+/* media queries for movie cards*/
+
+@media screen and (max-width: 1750px) {
+  .movie-card-container {
+    width: 70%;
+  }
+
+  .card-container {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .movie-card-container {
+    width: 80%;
+  }
+
+  .card-container {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .movie-card-container {
+    width: 75%;
+  }
+
+  .card-container {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .movie-card-container {
+    width: 75%;
+  }
+
+  .card-container {
+    width: 100%;
+  }
+}
+
+
