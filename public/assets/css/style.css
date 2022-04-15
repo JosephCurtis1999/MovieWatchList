@@ -2,23 +2,7 @@
 
 
 body {
-  background:-moz-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%); 
-
-  /* safari 5.1+,chrome 10+ */
-  background:-webkit-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
-
-  /* opera 11.10+ */
-  background:-o-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
-
-  /* ie 6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2A2A2B', endColorstr='#8F1928', GradientType=0 );
-
-  /* ie 10+ */
-  background:-ms-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
-
-  /* global 94%+ browsers support */
-  background:linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
-  
+    background: rgb(17, 17, 17);
     padding-bottom:80px;
     color: #ebeff1;
     font-family: CircularStd;
@@ -42,7 +26,7 @@ body {
     background:transparent;
     padding-top:.75rem;
     padding-bottom:.75rem;
-    color:#fff;
+    color:#FAA500;
     border-radius:0;
     box-shadow:none;
     border:none;
@@ -79,11 +63,11 @@ body {
   }
   
   .header-black .navbar .navbar-collapse span .login:hover {
-    color:#FAA500;
+    color:#D73739;
   }
   
   .header-black .navbar .navbar-toggler {
-    border-color:rgba(255,255,255,0.3);
+    border-color: #D73739;
   }
   
   .header-black .navbar .navbar-toggler:hover, .header-black .navbar-toggler:focus {
@@ -113,17 +97,18 @@ body {
     margin-top:-5px;
     box-shadow:0 4px 8px rgba(0,0,0,.1);
     /* background:linear-gradient(135deg, #222121, #4e4b4b); */
-    background-color:#222121;
+    background-color: white;
     border-radius: 7px;
   }
   
   .header-black .navbar .dropdown-menu .dropdown-item:focus, .header-black .navbar .dropdown-menu .dropdown-item {
     line-height:2;
-    color:#ebeff1;
+    color:#FAA500;
   }
   
   .header-black .navbar .dropdown-menu .dropdown-item:focus, .header-black .navbar .dropdown-menu .dropdown-item:hover {
-    background:#D73739;
+    background: #D73739;
+    color: white;
     
   }
   
@@ -140,7 +125,7 @@ body {
   }
   
   .header-black .action-button:hover {
-    color:#FAA500;
+    color: #D73739;
   }
   
   .header-black .navbar .form-inline label {
@@ -163,6 +148,23 @@ body {
   .header-black .navbar .form-inline .searchField:focus {
     border-bottom:1px solid #FAA500;
   }
+
+  /* Search button */
+
+  .search-movie-box {
+    margin-top: 1rem;
+    border: none;
+  }
+
+  .search-movie-button {
+    margin-top: 1rem;
+  }
+  
+  .search-icon {
+    filter: invert(1);
+  }
+
+
   
   /* Nav styling end */
 
@@ -303,6 +305,9 @@ a {
   margin: auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  color: #FAA500;
+  font-weight: 600;
+  font-size: 2.25rem;
 }
 
 .searchtext h2 {
@@ -313,19 +318,27 @@ a {
 
 /* movie card */
 
+
 .card-container {
-  width: 33%;
+  width: 24%;
   display: inline-block;
+  margin: auto;
   
 }
 
+.movie-card-container {
+  width: 70%;
+  margin: auto;
+}
+  
+
 .card {
-  margin: 100px auto 0;
-  width: 250px;
+  margin: 25px auto 0;
+  width: 275px;
   height: 400px;
   transition: all 0.75s linear;
   transform-style: preserve-3d;
-  background-color: #222121;
+  background-color: transparent;
   border-radius: 8px;
 }
 
@@ -355,17 +368,17 @@ a {
 
 .card__face--front img {
   min-height: 400px;
-  min-width: 250px;
+  min-width: 275px;
 }
 
 .card__face--front {
-  background-color: #222121;
+  background-color: transparent;
   z-index: 2;
   backface-visibility: hidden;
 }
 
 .card__face--back {
-  background-color: #222121;
+  background-color: white;
   transform: rotateY(180deg);
   z-index: 1;
 }
@@ -378,7 +391,8 @@ a {
 .card__header h4{
   text-align: center;
   margin-top: 0.5rem;
-  font-size: 18px;
+  font-size: 20px;
+  color: #FAA500;
 
 }
 
@@ -400,15 +414,15 @@ a {
 
 .card__body h5 {
   text-align: center;
-  color: white;
+  color: #FAA500;
   margin-top: 1rem;
 }
 
 .card__body h6 {
-  text-align: center;
+  text-align: justify;
   width: 85%;
   margin: auto;
-  color: white;
+  color: #FAA500;
   font-size: 14px;
   margin-top: 1rem;
 }
@@ -448,3 +462,4 @@ a {
 .searchtext {
   text-align: center;
 }
+

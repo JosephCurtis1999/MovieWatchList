@@ -13,10 +13,10 @@
                             </div>
                         </div>
                           <div class="row watchlist-title" >                   
-                           <h1 class="flash">Trending</h1>
+                           <h1 class="flash">Popular Movies</h1>
                           </div>
         </section>
-            <div class="row">
+            <div class="row movie-card-container">
 
                 <div class="col col-left-center col-full-xs" id="searchResult">
                       {{!-- <div class="col col-left-center col-full-xs searchtext">
@@ -24,6 +24,7 @@
                       </div> --}}
             <ul>
                 {{#each data}}
+                
                   <div class="card-container">
         
                 <div class="card">
@@ -43,7 +44,7 @@
                           <h6 class="overview"> {{this.overview}}</h6>
                            <form action="/api/watchlist" method="POST">
                                  <input type='hidden' name="movieID" value={{this.id}}>
-                                 <button type='submit' class="btn btn-primary" id="watchlater" >Watch later!</button>
+                                 <button type='submit' class="btn btn-primary" id="watchlater" style="background: #D73739;">Watch later!</button>
                                </form>
                                 </div>
                             </div>
