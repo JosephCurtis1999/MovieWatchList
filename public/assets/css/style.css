@@ -113,7 +113,7 @@ body {
   }
   
   .header-black .action-button, .header-black .action-button:not(.disabled):active {
-    border:1px solid #FAA500;
+    border: 2px solid #FAA500;
     border-radius:40px;
     color:#ebeff1;
     box-shadow:none;
@@ -305,7 +305,7 @@ a {
   margin: auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #FAA500;
+  color: white;
   font-weight: 600;
   font-size: 2.25rem;
 }
@@ -378,7 +378,22 @@ a {
 }
 
 .card__face--back {
-  background-color: #FAA500;
+  background:-moz-linear-gradient(90deg, rgba(250, 165, 0, 1) 0%, rgba(215, 55, 57, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, rgba(250, 165, 0, 1) 0%, rgba(215, 55, 57, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, rgba(250, 165, 0, 1) 0%, rgba(215, 55, 57, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D73739', endColorstr='#FAA500', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, rgba(250, 165, 0, 1) 0%, rgba(215, 55, 57, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, rgba(250, 165, 0, 1) 0%, rgba(215, 55, 57, 1) 100%);
   transform: rotateY(180deg);
   z-index: 1;
 }
@@ -392,7 +407,7 @@ a {
   text-align: center;
   margin-top: 0.5rem;
   font-size: 20px;
-  color: black;
+  color: white;
 
 }
 
@@ -414,7 +429,7 @@ a {
 
 .card__body h5 {
   text-align: center;
-  color: black;
+  color: white;
   margin-top: 1rem;
 }
 
@@ -422,7 +437,7 @@ a {
   text-align: justify;
   width: 85%;
   margin: auto;
-  color: black;
+  color: white;
   font-size: 14px;
   margin-top: 1rem;
 }
@@ -466,8 +481,13 @@ a {
 .watch-later-btn {
   color: #222121;
   border: none;
-  background-color: #D73739;
-  color: white;
+  background-color: white;
+  color: #D73739;
+}
+
+.watch-later-btn:hover {
+  background-color: #222121;
+
 }
 
 /* media queries for movie cards*/
