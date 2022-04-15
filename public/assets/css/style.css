@@ -1,9 +1,17 @@
+
+
+
 body {
     background:linear-gradient(135deg, #222121, #4e4b4b);
     padding-bottom:80px;
-    font-family: 'Barlow', sans-serif;
     color: #ebeff1;
+    font-family: CircularStd;
   }
+
+  @font-face {
+    font-family: CircularStd;
+    src: url(/assets/fonts/CircularStd-Book.otf);
+}
   
   @media (min-width:768px) {
     .header-black {
@@ -288,6 +296,12 @@ a {
 }
 
 /* movie card */
+
+.card-container {
+  width: 33%;
+  display: inline-block;
+  
+}
 
 .card {
   margin: 100px auto 0;

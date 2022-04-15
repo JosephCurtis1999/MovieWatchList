@@ -38,11 +38,11 @@
                            <h1 class="flash">MovieWatchList!</h1>
                           </div>
         </section>
-            <div class="row" style="background:linear-gradient(135deg, #222121, #4e4b4b);" >
+            <div class="row" >
 
                 <div class="col col-left-center col-full-xs" id="searchResult">
                     <div class="col col-left-center col-full-xs searchtext" style="media-left: 95px">
-                          <h2>Your Watchlist<span id=>{{movieSearch}}</span></h2 >
+                          {{!-- <h2><span id=>{{movieSearch}}</span></h2 > --}}
                       </div>
 
             <ul>
@@ -70,7 +70,9 @@
                     </div>
 
                   </div> --}}
-                  <div class="container">
+                  
+                  <div class="card-container">
+        
                 <div class="card">
                     <div class="card__inner">
                         <div class="card__face card__face--front">
@@ -96,6 +98,7 @@
                     </div>
                 </div> 
                 </div>
+                
                 {{/each}}
             </ul>
                 </div> 
