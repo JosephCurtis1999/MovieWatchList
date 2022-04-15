@@ -36,15 +36,15 @@
                         </div>
                           <div class="row" >                   
                           <div class="row" >                   
-                           <h1 class="flash">MovieWatchList</h1>            
+                           {{!-- <h1 class="flash">MovieWatchList</h1>             --}}
           
                            </div>
         </section>
-            <div class="row" style="background-color:#c81b85;" >
+            <div class="row">
 
                 <div class="col col-left-center col-full-xs" id="searchResult">
                       <div class="col col-left-center col-full-xs searchtext">
-                          <h2>Trending Movies<span id=>{{movieSearch}}</span></h2 >
+                          <h2>Trending<span id=>{{movieSearch}}</span></h2 >
                       </div>
             <ul>
                 {{#each data}}
@@ -77,7 +77,7 @@
                 <div class="card">
                     <div class="card__inner">
                         <div class="card__face card__face--front">
-                            <img src=http://image.tmdb.org/t/p/w185{{this.poster}} alt="Lights">
+                            <img src=http://image.tmdb.org/t/p/w185{{this.poster_path}} alt="Lights">
                         </div>
                         <div class="card__face card__face--back">
                             <div class="card__content">
