@@ -6,7 +6,8 @@ const { Users, Watchlist } = require("../models");
 
 const router = express.Router();
 
-
+// had a function to search for actors and the movies they starred in but
+// couldnt finish the functionality in time welp
 router.post('/keyword', function(req, res){
 	var queryKeyword = req.body.searchField;
 	var queryURL = 'https://api.themoviedb.org/3/search/person?api_key=e7c02e2eebde91634313b6657052a2a2&language=en-US&query=' + queryKeyword + '&page=1&include_adult=true';
@@ -51,7 +52,8 @@ router.post('/keyword', function(req, res){
 	});
 });
 
-
+// used router.route just to keep a single method kinda in the same place 
+// instead of writing get and post and delete again and again
 router.route('/watchlist/:movieID?')
 	.get(isLoggedIn, function(req, res) {
 		Watchlist.findAll({ where: { userId: req.user.id }}).then(function(list) { 
@@ -171,7 +173,7 @@ router.get('/user', function(req, res, next) {
 
 module.exports = router;
 
-
+// to make sure if the use is logged in or not
 function isLoggedIn(req, res, next) {
 	if (req.isAuthenticated()) {
 		return next();

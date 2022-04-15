@@ -58,13 +58,21 @@ No tests specified at this present time.
 
 ## Screenshot of deployed application
 
+![deployedapplication](https://user-images.githubusercontent.com/94229291/163622110-83758327-a296-4f9c-a374-ab2e6a7c904d.jpg)
+
+
+
 ## Link to deployed application
 
 https://rocky-wave-29154.herokuapp.com/
 
 ## Github repository
 
+https://github.com/JosephCurtis1999/MovieWatchList
+
 ## Questions 
+
+If you have any questions don't hesitate to contact us
 
 
 

@@ -4,10 +4,6 @@ const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class Users extends Model {}
-//   async checkPassword(comparisonPassword) {
-//     return bcrypt.compare(comparisonPassword, this.password);
-//   }
-// }
 
 Users.init(
   {
@@ -25,9 +21,6 @@ Users.init(
 		email: {
 			type: DataTypes.STRING,
 			allowNull: false,
-			// validate: {
-			// 	isEmail: true
-			// }
 		},
 		status: {
 			type: DataTypes.ENUM('active', 'inactive'),
@@ -39,19 +32,6 @@ Users.init(
     timestamps: false,
     freezeTableName: true,
     modelName: "user",
-  //   hooks: {
-  //     beforeCreate: async (newUser) => {
-  //       newUser.password = await bcrypt.hash(newUser.password, 10);
-
-  //       return newUser;
-  //     },
-
-  //     beforeUpdate: async (newUser) => {
-  //       newUser.password = await bcrypt.hash(newUser.password, 10);
-
-  //       return newUser;
-  //     },
-  //   },
   }
 );
 

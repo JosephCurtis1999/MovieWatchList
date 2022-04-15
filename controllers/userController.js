@@ -7,7 +7,7 @@ const rp = require('request-promise');
 
 const router = express.Router();
 
-
+// search for the movie by name
 router.get('/keyword', function(req, res){
 	var queryKeyword = req.body.searchField;
 	var queryURL = 'https://www.themoviedb.org/search?query='+queryKeyword;
@@ -44,6 +44,7 @@ router.route('/sign-up')
 	.get(function(req, res) {
 		res.render('sign-up', { title: 'Movies - Sign Up' });
 	})
+	// passport function to make sure signup is done with the proper credentials 
 	.post(passport.authenticate('local-signup', {
 		successRedirect: '/api/user',
 		failureRedirect: '/sign-up'
@@ -54,12 +55,13 @@ router.route('/login')
 	.get(function(req, res) {
 		res.render('login', { title: 'Movies - Login' });
 	})
+	// same passport functionality but for login instead
 	.post(passport.authenticate('local-login', {
 		successRedirect: '/api/user',
 		failureRedirect: '/login'
 }));
 
-
+// logout just ends the login session, doesnt delete user obv
 router.get('/logout', function(req, res) {
 	req.session.destroy(function(err) {
 		res.redirect('/');
