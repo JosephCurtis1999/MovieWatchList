@@ -58,7 +58,8 @@ No tests specified at this present time.
 
 ## Screenshot of deployed application
 
-![deployedapplication](https://user-images.githubusercontent.com/94229291/163622110-83758327-a296-4f9c-a374-ab2e6a7c904d.jpg)
+![deployedapplication2](https://user-images.githubusercontent.com/94229291/163630896-0de15411-187e-41ca-9fbe-d6f947838e91.jpg)
+
 
 
 
