@@ -378,7 +378,7 @@ a {
 }
 
 .card__face--back {
-  background-color: white;
+  background-color: #FAA500;
   transform: rotateY(180deg);
   z-index: 1;
 }
@@ -392,7 +392,7 @@ a {
   text-align: center;
   margin-top: 0.5rem;
   font-size: 20px;
-  color: #FAA500;
+  color: black;
 
 }
 
@@ -414,7 +414,7 @@ a {
 
 .card__body h5 {
   text-align: center;
-  color: #FAA500;
+  color: black;
   margin-top: 1rem;
 }
 
@@ -422,7 +422,7 @@ a {
   text-align: justify;
   width: 85%;
   margin: auto;
-  color: #FAA500;
+  color: black;
   font-size: 14px;
   margin-top: 1rem;
 }
@@ -461,5 +461,12 @@ a {
 
 .searchtext {
   text-align: center;
+}
+
+.watch-later-btn {
+  color: #222121;
+  border: none;
+  background-color: #D73739;
+  color: white;
 }
 
