@@ -2,7 +2,23 @@
 
 
 body {
-    background:linear-gradient(135deg, #222121, #4e4b4b);
+  background:-moz-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%); 
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
+
+  /* opera 11.10+ */
+  background:-o-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2A2A2B', endColorstr='#8F1928', GradientType=0 );
+
+  /* ie 10+ */
+  background:-ms-linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
+
+  /* global 94%+ browsers support */
+  background:linear-gradient(90deg, rgba(143, 25, 40, 1) 0%, rgba(42, 42, 43, 1) 100%);
+  
     padding-bottom:80px;
     color: #ebeff1;
     font-family: CircularStd;
