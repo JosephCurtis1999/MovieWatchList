@@ -48,7 +48,7 @@
                       </div>
             <ul>
                 {{#each data}}
-                  <div class="col-md-6" id="imagecard">
+                  {{!-- <div class="col-md-6" id="imagecard">
                     
                     <div class="media">
                         <div class="media-left media-middle">
@@ -71,7 +71,34 @@
                         </div>
                       </div>
 
-                  </div>
+                  </div> --}}
+                  <div class="card-container">
+        
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img src=http://image.tmdb.org/t/p/w185{{this.poster}} alt="Lights">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h4 class="media-heading" style="font-style: 'Source Sans Pro', sans-serif">{{this.title}} ({{this.release_date}}) </h4>
+                                </div>
+                                <div class="card__body">
+                                    
+                          <h5 class="rating">{{this.popularity}} <span class="glyphicon glyphicon-star"></span>{{this.vote_average}}  <span class="glyphicon glyphicon-thumbs-up"></span></h5>
+                                                    
+                          <h6 class="overview"> {{this.overview}}</h6>
+                           <form action="/api/watchlist/{{this.id}}?_method=DELETE" method="POST">
+                                 <input type='hidden' name="id" value={{this.id}}>
+                                 <button type='submit' class="btn btn-danger">Remove!</button>
+                               </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                </div>
                 {{/each}}
             </ul>
                 </div> 

@@ -61,12 +61,12 @@
                   <br>                   
                   </div>
               </section>
-        <div class="row" style="background-color:#c81b85;" >
+        <div class="row">
            <div class="col col-left-center col-full-xs" id="searchResult">
                     {{#if this.movieSearch}}
                        <div class="row" >                   
                           <div class="col col-left-center col-full-xs searchtext">
-                             <h2>Search Results:<span id=>{{movieSearch}}</span></h2 >
+                             <h2>Search Results: <span id=>{{movieSearch}}</span></h2 >
                           </div>
                       </div>
                       {{else}}
@@ -79,7 +79,7 @@
              <ul>
                 {{#each data}}
 
-                  <div class="col-md-6" id="imagecard">
+                  {{!-- <div class="col-md-6" id="imagecard">
                     
                     <div class="media">
                         <div class="media-left media-middle">
@@ -102,7 +102,34 @@
                         </div>
                       </div>
 
-                  </div>
+                  </div> --}}
+                  <div class="card-container">
+        
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img src=http://image.tmdb.org/t/p/w185{{this.poster_path}} alt="Lights">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <h4 class="media-heading" style="font-style: 'Source Sans Pro', sans-serif">{{this.title}} ({{this.release_date}}) </h4>
+                                </div>
+                                <div class="card__body">
+                                    
+                          <h5 class="rating">{{this.popularity}} <span class="glyphicon glyphicon-star"></span>{{this.vote_average}}  <span class="glyphicon glyphicon-thumbs-up"></span></h5>
+                                                    
+                          <h6 class="overview"> {{this.overview}}</h6>
+                           <form action="/api/watchlist" method="POST">
+                                 <input type='hidden' name="movieID" value={{this.id}}>
+                                 <button type='submit' class="btn btn-primary" id="watchlater" >Watch later!</button>
+                               </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                </div>
                 {{/each}}
             </ul>
           </div>
