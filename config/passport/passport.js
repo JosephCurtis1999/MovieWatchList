@@ -1,3 +1,4 @@
+// using the passport package to authenticate requests
 var bCrypt = require('bcrypt-nodejs');
 const { Users } = require('../../models');
 
@@ -47,8 +48,7 @@ module.exports = function(passport, user) {
 		});
 	}));
 
-	// dont really know why serialize and deserialize is important but 
-	// passport doesnt work without it 
+	// using serialize and deserialize in order for the passport to function properly 
 	passport.serializeUser(function(user, done) {
 		done(null, user.id);
 	});
@@ -63,6 +63,7 @@ module.exports = function(passport, user) {
 		});
 	});
 
+	// login using username and password
 	passport.use('local-login', new localStrategy({
 		usernameField: 'username',
 		passwordField: 'password',
