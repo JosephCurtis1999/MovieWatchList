@@ -50,6 +50,8 @@ Enter npm start into the terminal to start the application. Once a port has been
 
 ## Contributing
 
+No contribution guidlines at this time.
+
 ## Tests
 
 No tests specified at this present time.
