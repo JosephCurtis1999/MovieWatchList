@@ -102,7 +102,7 @@ router.get('/userData', isLoggedIn, function(req, res) {
 	res.json(req.user);
 });
 
-
+// post request to search for a movie 
 router.put('/movieSearch', function(req, res) {
 	var queryMovie = req.body.movie;
 	var queryURL = 'http://api.themoviedb.org/3/search/movie?api_key=e7c02e2eebde91634313b6657052a2a2&query=' + queryMovie
@@ -132,7 +132,7 @@ var options = {
     json: true
 };
  
-
+// get request for popular movies
 router.get('/popular', function(req, res, next) {
 rp(options)
     .then(function (body) { 
