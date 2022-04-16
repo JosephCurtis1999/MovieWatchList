@@ -4,6 +4,7 @@ const sequelize = require("../config/connection");
 
 class Watchlist extends Model {}
 
+// watchlist model includes a title, release date, movieId, poster, overview, vote average and popularity rating
 Watchlist.init(
     {
        title: {

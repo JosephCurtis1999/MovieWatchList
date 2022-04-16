@@ -5,6 +5,7 @@ const sequelize = require("../config/connection");
 
 class Users extends Model {}
 
+// user model includes a username, pasword and e-mail
 Users.init(
   {
     username: {
