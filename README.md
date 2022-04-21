@@ -67,7 +67,7 @@ No tests specified at this present time.
 
 ## Link to deployed application
 
-https://rocky-wave-29154.herokuapp.com/
+https://ebic-movie-watch-list.herokuapp.com/
 
 ## Github repository
 
